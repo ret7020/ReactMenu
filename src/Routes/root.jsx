@@ -47,7 +47,7 @@ export const Root = () => {
     <Layout className="site-layout" style={{ marginLeft: 200 }}>
       <Header style={{ padding: 0, background: colorBgContainer }} />
       <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-        <Outlet />
+        <Outlet/>
       </Content>
       <Footer style={{ textAlign: 'center' }}>ShTP dev</Footer>
     </Layout>

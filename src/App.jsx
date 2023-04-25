@@ -29,15 +29,10 @@ const router = createBrowserRouter([
 const App = () => {
     const [user, setUser] = useState({ userInfo: null, loading: true, loggedIn: false });
     useEffect(() => {
-        console.log("Check auth");
-        setUser({ userInfo: { id: 1, firstName: 'test' }, loggedIn: true, loading: false });
         // setTimeout(function () { // Fake api time simulation to check correct context checking
-            
-        //     console.log("User fake loaded");
+        //     setUser({ userInfo: { id: 1, firstName: 'test', role: 0 }, loggedIn: true, loading: false });
         // }, 2000);
-
-
-
+        setUser({ userInfo: { id: 1, firstName: 'test', role: 0 }, loggedIn: true, loading: false });
     }, [])
     return (
         <userContext.Provider value={{ userInfo: user.userInfo, loading: user.loading, loggedIn: user.loggedIn }}>
