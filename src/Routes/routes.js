@@ -44,5 +44,15 @@ export const routes = [
     },
     icon: <UserOutlined />,
     label: 'Документация'
+  },
+  {
+    path: 'admin',
+    async lazy() {
+      let { Admin } = await import("../Pages/Admin.jsx");
+      return { Component: Admin };
+    },
+    icon: <UserOutlined />,
+    label: 'Админ-панель',
+    private: true
   }
 ]
